@@ -1,0 +1,648 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+
+:root {
+    --yelow:#FAD52A;
+    --blue:rgb(8, 8, 130);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+*::selection {
+    background: var(--yelow);
+    color:black;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+
+.heading {
+    font-size: 4rem;
+    color: var(--yelow);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: .2em;
+    
+}
+
+.title {
+    padding:0 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    color:#aaa;
+}
+
+
+
+header {
+    width:96%;
+    background: #000;
+    position: fixed;
+    top:2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: .2s;
+}
+
+header.header-active {
+    top:0;
+    width:100%;
+    border-radius: 1rem;
+    
+}
+
+.header .navbar {
+    position: fixed;
+    top: 5.7rem; left:0;
+    width:100%;
+    border-radius: 1rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+
+}
+
+header .navbar ul li {
+    margin: 0 1rem;
+
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color: var(--yelow);
+    transition: .2s;
+}
+
+header .navbar ul li .active, 
+header .navbar ul li a:hover {
+    color:#fff;
+}
+
+header .logotaxi{
+    font-size: 3rem;
+    color:var(--yelow);
+}
+
+header span {
+    font-size: 1.8rem;
+    color:#fff;
+  
+   
+    
+}
+
+header .fa-bars {
+    color:#fff;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+
+}
+
+header .fa-times {
+    transform: rotate(180deg);
+    color:#fff;
+    
+}
+
+.home{
+    min-height: 100vh;
+    background: linear-gradient(rgba(10, 0, 18, 0.5),rgba(0,0,0,.9)),url(/images/Trencin_hdr_001.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.home .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow:column;
+    margin-top:15rem;
+    padding-top: 14rem;
+    padding-bottom:8rem;
+    text-align: center;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color:#fff;
+    padding: 0 1rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color: #eee;
+    padding: 1rem 25rem;
+
+}
+
+.home .content span {
+    color:var(--yelow);
+}
+
+
+.home .arrow i {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    color:var(--yelow);
+    text-align: center;
+    animation: anime 1.5s infinite ease-out alternate;
+    animation-delay: .5s;
+}
+
+/*
+.home .content button {
+    margin-top: 3rem;
+    height: 4rem;
+    width: 20rem;
+    border-radius: 5rem;
+    background: var(--yelow);
+    color:#000;
+    font-size: 2rem;
+    cursor:pointer;
+    transition: .2s;
+    border:none;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+
+}
+
+.home .content button:hover {
+    letter-spacing: .2rem;
+
+}
+*/
+.home::before {
+    content: '';
+    position: absolute;
+    bottom:-25%; left:50%;
+    transform: translateX(-50%);
+    border-top:45vh solid #fff;
+    width:150%;
+    border-radius: 50%;
+    z-index: -1;
+
+}
+.taxi {
+    height: 45vh;
+}
+
+.taxi img {
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    position: relative;
+    top:9rem;
+    margin:0 auto;
+   
+}
+
+.taxi h1 {
+    color:#000;
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top:12rem;
+}
+
+.box-containers .Onas {
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 2.5rem;
+    padding: 0 5rem;
+}
+
+.box-containers .box-container{
+    display:flex;
+    position: relative;
+    top:15rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-containers .box-container .box{
+    height:30rem;
+    width:35rem;
+    text-align: center;
+    margin:2rem;
+    transition: transform .2s;
+}
+
+.box-containers .box-container .box:hover {
+    transform: scale(1.05);
+}
+
+
+.box-containers .box-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    color:#eee;
+    background: #000;
+    transition: .2s;
+    margin: 2rem 0;
+    font-size: 3rem;
+
+}
+
+
+.box-containers .box-container .box h3{
+    font-size: 2rem;
+    color:#000;
+    transition: .2s;
+}
+
+.box-containers .box-container .box p{
+    font-size: 1.3rem;
+    padding: 2rem 2rem;
+    color:#666;
+}
+
+.box-containers .box-container .box:hover i {
+    background: var(--blue);
+}
+
+.box-containers .box-container .box:hover h3{
+    color:var(--blue);
+}
+
+.riders {
+    background: #fff;
+    position: relative;
+    top:18rem;
+    }
+
+.riders h1{
+    color:var(--blue);
+}
+
+.riders .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.riders .card-container .card {
+    padding:2rem;
+    margin: 2rem;
+    background: #fff;
+    text-align: center;
+    width: 28rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+    transition: .2s;
+}
+
+.riders .card-container .card:hover {
+    background: #eee;
+   }
+
+.riders .card-container .card img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale();
+    transition: .2s;
+    }
+
+.riders .card-container .card:hover img {
+    filter:grayscale(0);
+
+
+}
+
+.riders .card-container .card h3 {
+    color:var(--blue);
+    font-size: 2rem;
+    padding: 5rem 0;
+
+
+}
+
+.riders .card-container .card p  {
+    font-size: 1.7rem;
+    color:#666;
+
+}
+
+
+.riders .card-container .card .icons a{
+    font-size: 1.9rem;
+    padding: 1.5rem .5rem;
+    color:var(--blue);
+}
+
+.riders .card-container .card .icons a:hover
+ {
+    color:red;
+}
+
+.review {
+    min-height: 65vh;
+    background: linear-gradient(rgba(55, 1, 99, 0.5),rgba(0, 0, 0, 0.9)),url(/images/Trenčín\ hrad.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;;
+    position: relative;
+    top:20rem;
+}
+
+
+
+
+.review .box-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 8rem;
+    flex-wrap: wrap;
+}
+
+.review .heading {
+    color:var(--yelow)
+}
+
+.review .title {
+    color:#eee;
+}
+
+.review .box-container .box {
+    width: 28rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+    background:#eee;
+    margin: 4rem 2rem;
+    border-radius: 2rem;
+}
+
+.review .box-container .box img {
+    height: 8.5rem;
+    width: 8.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -4rem;
+    border: .6rem solid rgb(169, 10, 197);
+    border-left: .6rem solid rgb(151, 51, 213);
+    border-bottom:.6rem solid rgb(151, 79, 162);
+}
+
+.review .box-container .box h3{
+    font-size: 2rem;
+    color:black;
+    padding: 0 .5rem;
+
+}
+
+.review .box-container .box p{
+    font-size: 1.4rem;
+    color: #999;
+    padding: 0 1.3rem;
+}
+
+.review .box-container .box .stars i {
+    font-size: 1.6rem;
+    color:var(--yelow);
+    padding: 1.3rem .1rem;
+    
+
+}
+
+
+
+.contact {
+    min-height:90vh;
+    text-align: center;
+    background: #000;
+    padding-bottom:3rem;
+    position: relative;
+    top: 10rem;
+}
+
+.contact .heading{
+    color:var(--yelow);
+    padding-bottom: 5rem;
+   
+}
+
+.contact form{
+    width:75%;
+    margin:0 auto;
+
+}
+
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input, textarea{
+    height:4rem;
+    width:49%;
+    background: #111;
+    color: #fff;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: none;
+}
+
+.contact form .inputBox input:focus, textarea:focus {
+    background: #222;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize:none;
+    padding:1rem;
+    width:100%;
+}
+.contact form .btn {
+    font-size: 2rem;
+    background: var(--yelow);
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    transition: .2s;
+    transform: scale();
+    margin-top: 2rem;
+}
+
+.contact form .btn:hover {
+    
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+
+.footer {
+    position: relative;
+    color:#eee;
+    background: #111;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+
+}
+
+.footer a {
+    color:var(--orange);
+}
+
+
+@keyframes anime {
+  100% {
+    transform:translateY(20px);
+  }  
+}
+
+
+
+/*media queries*/
+
+@media (max-width:960px) {
+    .contact {
+        min-height:90vh;
+        text-align: center;
+        background: #000;
+        padding-bottom:3rem;
+        position: relative;
+        top: 18rem;
+    }
+}
+
+
+@media (max-width:850px) {
+    html {
+        font-size: 55%;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:-100rem; left:0;
+        width:100%;
+        background: var(--yelow);
+        border-radius: 1rem;
+        transition: linear .2s;
+    
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    header .navbar ul li a{
+        color:#333;
+        font-size: 3rem;
+        display: block;
+    }
+
+    header .navbar ul li{
+        margin: 1rem 0;
+        width:100%;
+        text-align: center;
+    }
+
+
+    header .navbar ul li a.active {
+        color:black;
+        font-weight: bold;
+    }
+    header .navbar ul li a:hover {
+        color:black;
+        font-weight: bold;
+           
+    }
+
+    header .nav-toggle{
+        top:5.5rem;
+        opacity:1;
+    }
+    .home .content {
+        margin-top: 20rem;
+    }
+
+    .home .content h1 {
+        font-size: 3.8rem;
+    }
+
+    .home .content p {
+        font-size: 1.8rem;
+        padding:1rem 10rem;
+        margin-top: 2rem;
+    }
+
+    .taxi img {
+        width: 350px;
+        top:14rem;
+    }
+
+    .taxi h1 {
+        color:#000;
+        font-size: 4rem;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        top:15rem;
+    }
+    
+    .box-containers .box-container .box{
+        height:22rem;
+        width:30rem;
+        text-align: center;
+        margin:0rem;
+        transition: transform .2s;
+    }
+
+    .box-containers .Onas {
+        padding-top: 5rem;
+    }
+
+    .box-containers .box-container{
+        top:5rem;}
+      
+    
+  
+}
